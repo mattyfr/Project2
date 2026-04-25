@@ -1,0 +1,10 @@
+#displayItemPlace{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        border: 2px black solid;
+    }
+}
