@@ -1,10 +1,41 @@
 #displayItemPlace{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
     div{
         display: flex;
         flex-direction: column;
         border: 2px black solid;
+    }
+}
+header{
+    display: flex;
+    background-color: darkblue;
+    justify-content: space-between;
+    align-content: center;
+    h1{
+
+    }
+    .logga{
+        max-width: 12%;
+        max-height: 10%;
+    }
+    img{
+        border-radius: 45px;
+    }
+}
+main{
+    display: flex;
+    flex-direction: row;
+    
+    #displayItemPlace{
+        justify-self: center;
+    }
+    #search{
+        justify-self: end;
+    }
+    #mainContainer{
+        max-width: 75%;
+        max-height: 99%;
+        padding-left: 100px;
     }
 }
