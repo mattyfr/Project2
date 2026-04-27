@@ -1,19 +1,15 @@
-#displayItemPlace{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    div{
-        display: flex;
-        flex-direction: column;
-        border: 2px black solid;
-    }
+
+body{
+    background-color: lightgray;
 }
 header{
     display: flex;
-    background-color: darkblue;
+    background-color: gray;
     justify-content: space-between;
     align-content: center;
     h1{
-
+        justify-self: center;
+        align-self: center;
     }
     .logga{
         max-width: 12%;
@@ -24,18 +20,77 @@ header{
     }
 }
 main{
-    display: flex;
-    flex-direction: row;
-    
+    #mainContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
     #displayItemPlace{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: gray;
         justify-self: center;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        border-radius: 3rem;
+        margin-top: 2rem;
+        div{
+            display: flex;
+            flex-direction: column;
+            border: 2px black solid;
+            max-width: 80%;
+            max-height: 80%;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
     #search{
+        background-color: gray;
+        margin-left: 20rem;
+        margin-right: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 1rem;
+        margin-top: 2rem;
         justify-self: end;
     }
-    #mainContainer{
-        max-width: 75%;
-        max-height: 99%;
-        padding-left: 100px;
+}
+#cartContainer:hover{
+    display: disabled;
+}
+#cartContainer{
+    position: relative;
+    display: inline-block;
+}
+#cartItemId{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    max-height: 40%;
+    p{
+        margin-left: 0.5rem;
+        margin-right: 0.75rem;
+        
+    }
+}
+/* phone */
+@media (max-width: 600px) {
+    #displayItemPlace{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #serch{
+        display: none;
+    }
+}
+/* ipad */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #displayItemPlace{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #serch{
+        display: none;
     }
 }
